@@ -3,7 +3,8 @@
 .flslideshow .nav-but.prev-but{background:transparent url(icons/arror-left-white.png) no-repeat 0 0;left:32px;}
 .flslideshow .nav-but.next-but{background:transparent url(icons/arror-right-white.png) no-repeat 0 0;right:32px;}
 .flslideshow .viewport .scroll-area{list-style:none;position:relative;top:20px;left:0;width:30000px;overflow:hidden;margin:0;padding:0;}
-.flslideshow .viewport .scroll-area .slide{height:auto;float:left;position:relative;overflow:hidden;margin:0;padding:0;overflow: hidden;}
+.flslideshow .viewport .scroll-area .slide{height:auto;float:left;position:relative;overflow:hidden;margin:0;padding:0;overflow: hidden;zoom:1;}
+.flslideshow .viewport .scroll-area .slide * {filter: inherit;} /* ie8 opacity bug */
 .flslideshow .viewport .scroll-area .slide .title{font-size:32px;z-index:3;position:absolute;top:10%;right:90px;text-align:right;}
 .flslideshow .viewport .scroll-area .slide .description{font-size:24px;z-index:3;position:absolute;}
 .flslideshow .viewport .scroll-area .slide .bg-image img{top:0;left:0;width:100%;height:auto;z-index:1;position:relative;}
