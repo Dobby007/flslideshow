@@ -1,0 +1,13 @@
+.flslideshow{height:auto;color:#FFF;width:100%;position:relative;overflow:hidden; font-family: Tahoma, Arial}
+.flslideshow .nav-but{width:64px;height:100px;position:absolute;top:50%;margin-top:-16px;cursor:pointer;display:block;z-index:5;}
+.flslideshow .nav-but.prev-but{background:transparent url(icons/arror-left-white.png) no-repeat 0 0;left:32px;}
+.flslideshow .nav-but.next-but{background:transparent url(icons/arror-right-white.png) no-repeat 0 0;right:32px;}
+.flslideshow .viewport .scroll-area{list-style:none;position:relative;top:20px;left:0;width:30000px;overflow:hidden;margin:0;padding:0;}
+.flslideshow .viewport .scroll-area .slide{height:auto;float:left;position:relative;overflow:hidden;margin:0;padding:0;overflow: hidden;}
+.flslideshow .viewport .scroll-area .slide .title{font-size:32px;z-index:3;position:absolute;top:10%;right:90px;text-align:right;}
+.flslideshow .viewport .scroll-area .slide .description{font-size:24px;z-index:3;position:absolute;}
+.flslideshow .viewport .scroll-area .slide .bg-image img{top:0;left:0;width:100%;height:auto;z-index:1;position:relative;}
+.flslideshow .nav-block{position:absolute;bottom:40px;z-index:10;overflow:hidden;text-align:center;width:100%;}
+.flslideshow .nav-block .nav-slide{width:10px;height:10px;display:inline-block;margin-left:10px;border:1px solid #fff;border-radius:5px;cursor:pointer;}
+.flslideshow .nav-block .nav-slide.active{background-color:#fff;}
+.flslideshow .viewport{overflow:hidden;}

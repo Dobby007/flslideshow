@@ -5,28 +5,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=devgit lice-width">
         <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript" src="../js/jquery.flslideshow.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="../source/jquery.flslideshow.js"></script>
+        <link rel="stylesheet" type="text/css" href="../source/flslideshow.css" />
+        <style type="text/css">
+            body{padding:20px 40px;}
+            #slideshow1 .slide-1 .title { top: 40%; right: 200px; font-size: 42px;}
+            #slideshow2 .slide-1 .title { left: 20px; right: auto; font-size: 42px;}
+            #slideshow2 .slide-1 .description { top: auto; bottom: 80px; left: 20px; }
+            #slideshow2 .slide-2 .title { left: 20px; right: auto; font-size: 42px;}
+            #slideshow2 .slide-2 .description { bottom: 50px; left: 20px; right: auto;}
+        </style>
         <script type="text/javascript">
             $(function(){
-                $('#slideshow1, #slideshow2').flslideshow({
+                $('#slideshow1').flslideshow({
+                    animation: 'fade'
+                });
+                $('#slideshow2').flslideshow({
                     animation: 'float',
                     slides: [
                         {
                             title: 'Мой слайд №1',
-                            bgimage: 'img/finance.jpg'
+                            desc: 'Tsh... We want you to see something.',
+                            bgimage: 'img/big_five.jpg'
                         },
                         {
                             title: 'Мой слайд №2',
-                            bgimage: 'img/mobility.jpg'
+                            desc: 'Легко и просто',
+                            bgimage: 'img/cropped-african-lion-header.jpg'
                         },
                         {
                             title: 'Мой слайд №3',
-                            bgimage: 'img/technology.jpg'
+                            bgimage: 'img/mountain_flowers.jpg'
                         },
                         {
                             title: 'Мой слайд №4',
-                            bgimage: 'img/prosp.jpg'
+                            bgimage: 'img/sea_mountains.jpg'
                         }
                     ]
                 });
@@ -35,7 +48,7 @@
         </script>
     </head>
     <body>
-        <div id="slideshow1" class="intro">
+        <div id="slideshow1">
             <ul>
                 <li>
                     <img src="img/prosp.jpg" />
@@ -47,7 +60,7 @@
                 </li>
             </ul>
         </div>
-        <div id="slideshow2" class="intro">
+        <div id="slideshow2">
         </div>
     </body>
 </html>

@@ -17,7 +17,7 @@
                 ui.elems.navblock = $('<div>').addClass(settings.classNavBlock);
                 ui.elems.scroll = $('<ul>').addClass(settings.classScroll).appendTo(ui.elems.viewport);
 
-                me.data(FLSLIDEDATA, {ui: ui, settings: settings});
+                me.data(FLSLIDEDATA, {ui: ui, settings: settings}).addClass(settings.classRoot);
                 var slider_ci = slider(me);
 
                 if(!hasSlides){
@@ -46,7 +46,7 @@
                         h: h
                     };
 
-                    scroll.children().width(w).height(h);
+                    scroll.children().width(w);
                     slider_ci.navigateTo(slider_ci.getCurrentIndex());
                 };
                 resizeSlides();
@@ -301,7 +301,7 @@
         
         function addSlideDom(slide, rebuildNav){
             $(slide).addClass(this.settings.classSlide)
-                    .addClass(this.settings.classSlide + '-' + (this.ui.elems.scroll.children().size() + 1));
+                    .addClass(this.settings.classSlide + '-' + (this.ui.numSlides + 1));
             
             this.ui.numSlides ++;
             
@@ -312,7 +312,7 @@
         
         function addSlide(slide, rebuildNav){
             var i, sdom = $('<li>').addClass(this.settings.classSlide)
-                                   .addClass(this.settings.classSlide + '-' + (this.ui.elems.scroll.children().size() + 1)),
+                                   .addClass(this.settings.classSlide + '-' + (this.ui.numSlides + 1)),
                 items = ['Title', 'Desc', 'AltInfo'];
         
             $('<img/>').attr('src', slide.bgimage).attr('alt', slide.title)
@@ -415,6 +415,7 @@
             return methods[ options ].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof options === 'object' || !options) {
             var settings = {
+                classRoot: 'flslideshow',
                 classSlide: 'slide',
                 classTitle: 'title',
                 classDesc: 'description',
