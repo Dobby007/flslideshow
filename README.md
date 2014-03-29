@@ -8,7 +8,8 @@ Features
 =========
 
 * Multiple instances on the same page
-* Three switching effects
+* Three slide switching effects "out of the box": infinite scrolling, fading or simple navigation
+* Navigation buttons
 * Dynamic assigning of CSS classes
 * Auto-switching of slides with timeout defined in settings
 * Different sources of slides. Slides can be set in settings or right in the markup of your page (see demo page for more info)
